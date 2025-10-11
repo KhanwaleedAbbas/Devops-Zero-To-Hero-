@@ -24,3 +24,4 @@
    we call logical because they don't exist physically. so they are VMs. we add efficiency by adding hypervisor
    **Popular hypervisor:** VMware, xen etc
    Every VM is have it's own Memory, Cpu, Storage.
+   So, the world of VM works on hypervisor whether it is EC2, Google or Azure. The hypervisor are installed in physical server of data center.
