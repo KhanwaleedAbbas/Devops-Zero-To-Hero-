@@ -1,0 +1,27 @@
+Script executed successfully at Tue Oct 14 20:00:02 PKT 2025
++ echo 'Print list of s3 bucket'
+Print list of s3 bucket
++ aws s3 ls
+2025-10-08 00:04:33 aws-iam-policies-bucket
+2025-10-10 15:46:38 cf-templates-1htpp4ep9bc5m-ap-south-1
+2025-10-10 14:59:50 cf-templates-9r8uv7cmup2i0-ap-south-1
+2025-10-09 14:46:56 laravel-app-static-bucket
+2025-10-10 16:09:15 waleed-bucket-aws-demo.com
++ echo 'Print list of EC2 Instances'
+Print list of EC2 Instances
++ aws ec2 describe-instances
++ jq '.Reservations[].Instances[].InstanceId'
+"i-0cb9d3efa168bc98e"
+"i-01829c9696fe8e9d2"
++ echo 'Print list of lambda ducntions'
+Print list of lambda ducntions
++ aws lambda list-functions
+{
+    "Functions": []
+}
++ echo 'Print list ofIAM users'
+Print list ofIAM users
++ aws iam list-users
++ jq '.Users[].UserName'
+"Waleed-Hazza"
+"waleeddevops"
