@@ -1,1 +1,1 @@
-# Virtual Machines
+# AWS SHELL SCRIPT | PROJECT
