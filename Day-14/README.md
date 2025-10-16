@@ -73,9 +73,8 @@ Inside config management there are many tools
 4. Salt
 
 ## Puppet vs Ansible? why ansible? and why it is better?
-- Puppet is a pull mechanism and Ansible is a push mechanism.
-- 
-Scenario: In an Org xyz DevOps Engineer manages the congiuration of AWS so in this AWS he created 10 EC2 Instances and his reponsibility is to manage 10 EC2 Instances means <br>
+- Puppet is a pull mechanism and Ansible is a push mechanism. 
+**Scenario:** In an Org xyz DevOps Engineer manages the congiuration of AWS so in this AWS he created 10 EC2 Instances and his reponsibility is to manage 10 EC2 Instances means <br>
 when there is a security update or some packages to be monitored or change, this Devop engineer uses the Ansible tool to update the config of 10 EC2 Servers. <br>
 Push model ==> Write ansible scripts or playbook at one place(called as laptop) and push it to 10 EC2 instance and everything is updated. <br>
 Ansible uses Agentless model which means if someone uses puppet it follows master/slaves(node) architecture. <br>
@@ -84,7 +83,7 @@ In puppet the DevOps Engineer have to write the Instances as slave like Slave1, 
 **Scenario**: For example during a christmas day you think your company load to go up and the company scaleup their server and after that they want to scale down the servers, <br>
 so this is dynamic environemnt, so with ansible if your scaling up servers you just need to provide ip address and you are good to go<br>
 
-Dynamic Inventory: If you are creating 100 servers and with some settings what you can do is you can tell ansible whenever a new ec2 Instance is created on my AWS Account in a specific region or AZ <br>
+**Dynamic Inventory:** If you are creating 100 servers and with some settings what you can do is you can tell ansible whenever a new ec2 Instance is created on my AWS Account in a specific region or AZ <br>
 you have to take care of it. Ansible will auto detect that the new server which is created have to be managed by me.<br>
 
 Because of Agent less architecture life is very easy. <br>
