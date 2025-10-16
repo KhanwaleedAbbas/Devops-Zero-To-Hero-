@@ -42,22 +42,22 @@ Let’s break down the key pain points <br>
 - But 100+ servers meant massive repetition of manual work.
 - No way to “apply one change everywhere” reliably.
 **Example:**
-- You need to update one line in an Apache config file → must SSH into every machine.
+- You need to update one line in an Apache config file → must SSH into every machine. <br>
 
-### Example: Before vs After
-**Before:**
-SSH into 50 servers and install Nginx manually or via custom scripts.
-**After (Ansible):**
-**Create one YAML playbook:
-	- hosts: webservers
-  	become: yes
-  	tasks:
-    	 - name: Install nginx
-      	   apt:
-           name: nginx
-           state: present**
-Run: ansible-playbook nginx.yml
-All 50 servers are updated automatically and consistently.
+### Example: Before vs After <br>
+**Before:** <br>
+SSH into 50 servers and install Nginx manually or via custom scripts. <br>
+**After (Ansible):** <br>
+**Create one YAML playbook: <br>
+	- hosts: webservers <br>
+  	become: yes <br>
+  	tasks: <br>
+    	 - name: Install nginx <br>
+      	   apt: <br>
+           name: nginx <br>
+           state: present** <br>
+Run: ansible-playbook nginx.yml <br>
+All 50 servers are updated automatically and consistently.<br>
 
 **Problem:** If it was a window machine we have to write some psh script or if it was a linux machine we have to write shell script <br>
 and inside shell script there was a clause because linux has many distribution and for every distribution there might have different commands. <br>
