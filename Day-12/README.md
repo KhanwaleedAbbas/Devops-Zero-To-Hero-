@@ -6,12 +6,13 @@
 - we want some environment variable to be set
 - create .env file 
  - environment variable file is where you set that particular variable which you use again & again. It is basically used to store secret credentials.
-- copy the env variable in .env file
-	DOMAIN= ""
-	PORT=3000
-	STATIC_DIR="./client"
-	PUBLISHABLE_KEY="" ==> Stripe APIs Key
-	SECRET_KEY=""
+- copy the env variable in .env file.
+
+	- DOMAIN= "" 
+	- PORT=3000
+	- STATIC_DIR="./client"
+	- PUBLISHABLE_KEY="" ==> Stripe APIs Key
+	- SECRET_KEY=""
 
 Run the application
 	-npm install 
