@@ -1,0 +1,20 @@
+pipeline {
+  agent {
+    docker { image 'python:3.10-alpine' }
+  }
+
+  stages {
+    stage('Run Python App') {
+      steps {
+        // Print Python version
+        sh 'python --version'
+
+        // Create and run a simple Python Hello World script
+        sh '''
+          echo "print('Hello, World from Jenkins + Python!')" > app.py
+          python app.py
+        '''
+      }
+    }
+  }
+}
