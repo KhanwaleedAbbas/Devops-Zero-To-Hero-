@@ -1,0 +1,23 @@
+pipeline {
+  agent {
+    docker { image 'python:3.10-alpine' }  // Use lightweight Python container
+  }
+
+  stages {
+    stage('Checkout Code') {
+      steps {
+        // Fetch your Python file from GitHub
+        git branch: 'main', url: 'https://github.com/KhanwaleedAbbas/Devops-Zero-To-Hero-.git'
+      }
+    }
+
+    stage('Run Python Script') {
+      steps {
+        sh '''
+          echo "Running Python Application..."
+          python Day-19/Project/hello.py
+        '''
+      }
+    }
+  }
+}
