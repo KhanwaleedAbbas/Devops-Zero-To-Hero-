@@ -67,9 +67,53 @@ Then log out and back in (or reboot).
 ### Phase 3: Create a Simple Python App
 Create a simple Python project and push it to GitHub:
 
+**File: hello.py** <br>
+      print("Hello WALEED, CI/CD from Jenkins!")
 
+**File: Jenkinsfile**
 
+            pipeline {
+              agent {
+                docker { image 'python:3.10-alpine' }
+              }
+            
+              stages {
+                stage('Checkout Code') {
+                  steps {
+                    git branch: 'main', url: 'https://github.com/KhanwaleedAbbas/Devops-Zero-To-Hero-.git'
+                  }
+                }
+            
+                stage('Run Python Script') {
+                  steps {
+                    sh '''
+                      echo "Running Python Application from subdirectory..."
+                      python Day-19/Project/hello.py
+                    '''
+                  }
+                }
+              }
+            }
 
+### Phase 4: Create Jenkins Pipeline
+1. Open Jenkins → New Item
+2. Enter name → select Pipeline
+3. Scroll to Pipeline Definition
+   - Choose Pipeline script from SCM
+   - SCM: Git
+   - Repo URL: your GitHub repo URL
+   - Branch: main
+4. Click Save
+
+### Phase 5: Run Your First Build
+1. Click Build Now
+2.  Watch the console output
+      You'll see Jenkins:
+          - Pull the code
+          - Launch a Docker container
+          - Run the Python app
+          - Save artifacts
+   ✅ Success means CI/CD setup is working!
 
 
 
