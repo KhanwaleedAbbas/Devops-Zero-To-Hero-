@@ -107,14 +107,21 @@ Create a simple Python project and push it to GitHub:
 
 ### Phase 5: Run Your First Build
 1. Click Build Now
-2.  Watch the console output
-      You'll see Jenkins:
-          - Pull the code
-          - Launch a Docker container
-          - Run the Python app
-          - Save artifacts
-   ✅ Success means CI/CD setup is working!
+2.  Watch the console output <br>
+You'll see Jenkins:
+   - Pull the code
+   - Launch a Docker container
+   - Run the Python app
+   - Save artifacts <br>
+✅ Success means CI/CD setup is working!
 
+## SUCCESS
+
+<img width="1365" height="604" alt="Success" src="https://github.com/user-attachments/assets/84857630-ef45-4f18-bbdb-18c0149720ba" />
+
+<img width="1366" height="607" alt="Success-2" src="https://github.com/user-attachments/assets/cde6164f-bae5-4bea-9c63-6b0c846ede5e" />
+
+<img width="1366" height="605" alt="Success-3" src="https://github.com/user-attachments/assets/861b4ca0-d044-46b4-ade2-1e19ef9daf29" />
 
 
 
